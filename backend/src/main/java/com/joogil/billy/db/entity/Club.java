@@ -1,10 +1,10 @@
 package com.joogil.billy.db.entity;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
@@ -13,24 +13,33 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Entity
 @Data
 @EntityListeners(AuditingEntityListener.class)
-public class User extends BaseEntity {
+public class Club extends BaseEntity {
+    @ManyToOne
     @NotNull
-    private String email;
-
-    @NotNull
-    private String password;
+    private Category category;
 
     @Column(length = 100)
     @NotNull
     private String name;
 
-    private String profileImgUrl;
+    @Column(columnDefinition = "TEXT")
+    @NotNull
+    private String description;
 
-    @Column(length = 11)
-    private String phoneNumber;
+    @NotNull
+    private String password;
 
-    private LocalDate birth;
+    @NotNull
+    private Boolean isAutoJoin;
+
+    private String thumbnailUrl;
+
+    @NotNull
+    private Boolean isAuthorizedPhoneNumber;
+
+    @NotNull
+    private Boolean isAuthorizedBirth;
 
     @CreatedDate
-    private LocalDateTime regDatetime;
+    private LocalDate regDate;
 }
