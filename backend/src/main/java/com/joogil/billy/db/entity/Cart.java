@@ -1,10 +1,12 @@
 package com.joogil.billy.db.entity;
 
-import javax.persistence.Id;
+import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import lombok.Data;
 
-public class Cart {
-    @Id
+@Entity
+@Data
+public class Cart extends BaseEntity {
     @OneToOne
     private User user;
 }
