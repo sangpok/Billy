@@ -32,4 +32,8 @@ build/
 ### VS Code ###
 .vscode/
 
-*.log
+# log files
+billy.log*
+
+# properties secret
+/src/main/resources/secrets/*
