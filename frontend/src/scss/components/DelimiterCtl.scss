@@ -1,0 +1,19 @@
+.delimiter-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1rem;
+
+    .line {
+        background-color: var(--black10);
+        height: 3px;
+        flex: 1 1 auto;
+    }
+
+    .content {
+        margin: 0 24px;
+        color: var(--black40);
+    }
+}

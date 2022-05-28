@@ -1,0 +1,14 @@
+@mixin setImgWrapper($width, $height) {
+    min-width: $width;
+    max-width: $width;
+    min-height: $height;
+    max-height: $height;
+    overflow: hidden;
+}
+
+@mixin setImgSize($width, $height) {
+    width: $width;
+    height: $height;
+
+    object-fit: cover;
+}

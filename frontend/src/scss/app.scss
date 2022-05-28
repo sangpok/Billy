@@ -1,5 +1,13 @@
+@import '@/scss/commons/_variables';
+@import '@/scss/commons/_mixins';
+@import '@/scss/commons/common';
+@import '@/scss/commons/_google-font';
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--black100);
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
 }

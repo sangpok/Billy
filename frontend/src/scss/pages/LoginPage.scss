@@ -1,3 +1,125 @@
-div {
-    background: none;
+@import '@/scss/commons/_mixins';
+
+#login-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    .full-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .splash-container {
+            width: 610px;
+            height: 820px;
+            margin-right: 24px;
+
+            .img-wrapper {
+                @include setImgWrapper(610px, 819px);
+
+                img {
+                    @include setImgSize(610px, 819px);
+                }
+            }
+        }
+
+        .right-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .login-container {
+                width: 390px;
+                padding: 44px 24px;
+
+                .login-section {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 48px 0;
+
+                    .img-wrapper {
+                        @include setImgWrapper(130px, 84px);
+
+                        img {
+                            @include setImgSize(130px, 84px);
+                        }
+                    }
+
+                    .account-field {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+
+                        .input-field {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+
+                            .login-setting-field {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: end;
+                                gap: 12px;
+
+                                .chkbox-wrapper {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 4px;
+
+                                    label {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .social-login-field {
+                        display: flex;
+                        flex-direction: column;
+                        // justify-content: center;
+                        // align-items: center;
+                        gap: 12px;
+
+                        width: 100%;
+                    }
+                }
+            }
+
+            .account-help-section {
+                padding: 24px;
+
+                .account-help-content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    width: 100%;
+
+                    .search-pwd-field,
+                    .signin-field {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        width: 100%;
+
+                        a {
+                            font-weight: 700;
+                            color: var(--blue);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
